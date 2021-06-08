@@ -12,10 +12,10 @@ class MiNav extends HTMLElement {
   protege(privilegios) {
     let html = "";
     if (privilegios.has("Pasatiempos")) {
-      html += /* html */ `<li><a href="pasatiempos.html">Pasatiempos</a></li>`;
+      html += /* html */ `<li><a href="pasatiempos.html">Noticias</a></li>`;
     }
     if (privilegios.has("Usuarios")) {
-      html += /* html */ `<li><a href="usuarios.html">Usuarios</a></li>`;
+      html += /* html */ `<li><a href="usuarios.html">Edición</a></li>`;
     }
     this.ul.innerHTML += html;
   }
