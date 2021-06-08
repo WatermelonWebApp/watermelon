@@ -11,7 +11,10 @@ import {
 class MiNav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = /* html */
-      `<ul>
+      `<a href="#" class=logo">
+        <img src="img/Logo.png" alt="Logo" width="50" height=auto>
+      </a>
+      <ul>
         <li>
           <a href="index.html">
             Inicio</a>
@@ -45,10 +48,7 @@ class MiNav extends HTMLElement {
       if (roles.has(
         "Administrador")) {
         html += /* html */
-          `<a href="#" class=logo">
-            <img src="img/Logo.png" alt="Logo" width="50" height=auto>
-          </a>
-          <li>
+          `<li>
             <a href=
               "chat.html">Noticias del Dia</a>
           </li>
