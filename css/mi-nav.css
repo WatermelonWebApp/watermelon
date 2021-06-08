@@ -5,6 +5,7 @@ mi-nav {
 }
 
 mi-nav ul {
+  height: 50px;
   display: flex;
   justify-content: right;
   align-items: right;
