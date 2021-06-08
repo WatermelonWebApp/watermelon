@@ -21,33 +21,62 @@
         <script type="module" src="cmp/my-progreso.js"></script>
     </head>
     <body>
-        <form name="forma">
-            <my-nav></my-nav>
-            <header>
-                <h1>Pantalla Inicial</h1>
-                <div class="herramientas">
-                    <button type="button" name="terminarSesión">
-                        Terminar Sesión
-                    </button>
-                </div>
-            </header>
-            <figure>
-                <img id="avatar" alt="Avatar">
-            </figure>
-            <p>
-                <label>
-                    Email
-                    <output name="email"></output>
-                </label>
-            </p>
-            <p>
-                <label>
-                    Nombre
-                    <output name="nombre"></output>
-                </label>
-            </p>
-            <my-footer></my-footer>
-        </form>
-        <script type="module" src="js/CtrlSesion.js"></script>
+        <h1>Proyecto</h1>
+        <h2>Sesion</h2>
+        <fieldset>
+            <legend>Email</legend>
+            <output id="email"><progress max="100">Cargando...</progress></output>
+        </fieldset>
+        <figure><img id="avatar" alt="Avatar"></figure>
+        <button type="button" onclick="terminaSesion()">Terminar Sesión</button>
+        <footer>Copyright &copy; 2021 Hernandez Nuñez Marco Antonio</footer>
+        <script>
+            // @ts-check
+            /**Conexion al sistema de autenticación de Firebase**/
+            // @ts-ignore
+            const auth= firebase.auth();
+            /** Tipo de autenticación de usuarios. En este caso es con Google */
+            const provider= new firebase.auth.GoogleAuthProvider();
+            /* Configura el proveedor de Google para que permita seleccionar de una
+            lista */
+            provider.setCustomParameters({ prompt: "select_account" });
+            /* Recibe una funcion que se invoca cada que hay un cambio en la
+             * autenticacion y recibe el modelo con las caracteristicas del usurio */
+            auth.onAuthStateChanged(
+                /** Recibe las caracteristicas del usuario o null si no ha iniciado
+                  * sesion */
+                 usuarioAuth => {
+                     if (usuarioAuth && usuarioAuth.email){
+                         // Usuario aceptado
+                         // @ts-ignore Muestra el nombre registrado en Google
+                         email.value= usuarioAuth.email;
+                         // @ts-ignore Muestra el nombre registrado en Google
+                         nombre.value= usuarioAuth.displayName;
+                         // @ts-ignore Muestra el avatar registrado en Google
+                         avatar.src= usuarioAuth.photoURL;
+                     } else {
+                         // No ha iniciado sesion. Pide datos para iniciar sesion
+                         auth.signInWithRedirect(provider);
+                     }
+                 },
+                 // Funcion que se invoca si hay un error al verificar el usuario
+                 procesaError
+            );
+            /** Termina la sesion */
+            async function terminaSesion() {
+                try {
+                    await auth.signOut();
+                } catch (e) {
+                    procesaError(e);
+                }
+            }
+            /** Procesa un error. Muestra el objeto en la consola y un cuadro de
+             * alerta con el mensaje
+             * @param {Error} e descripcion del error */
+            function procesaError(e) {
+                console.log(e);
+                alert(e.message);
+            }
+        </script>
     </body>
 </html>
