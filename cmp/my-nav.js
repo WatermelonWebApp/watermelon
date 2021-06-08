@@ -11,11 +11,11 @@ import {
 class MyNav extends HTMLElement {
     connectedCallback(){
         this.innerHTML = /* html */
-            `<ul>
+            '<ul>
                 <li>
                     <a href="index.html">Sesión</a>
                 </li>
-            </ul>`;
+            </ul>';
             this.ul = this.querySelector("ul");
             getAuth().onAuthStateChanged(
                 usuario => this.cambiaUsuario(usuario), muestraError
@@ -31,15 +31,15 @@ class MyNav extends HTMLElement {
             const roles = await cargaRoles(usu.email);
             if (roles.has("Cliente")) {
                 html += /* html */
-                    `<li>
+                    '<li>
                         <a href= "chat.html">Chat</a>
-                    </li>`;
+                    </li>';
             }
             if (roles.has("Administrador")) {
                 html += /* html */
-                    `<li>
+                    '<li>
                         <a href= "alumnos.html">Alumnos</a>
-                    </li>`;
+                    </li>';
             }
             this.ul.innerHTML += html;
         }
