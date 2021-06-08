@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Alumnos</title>
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Carga el nucleo de Firebase JS SDK-->
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+        <!-- Carga el manejo de autenticación-->
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+        <!-- Carga el manejo de la base de datos-->
+        <script src= "https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+        <!-- Iniciador de Firebase-->
+        <script src="js/init.js"></script>
+        <!-- Controladores para extras-->
+        <script type="module" src="cmp/my-nav.js"></script>
+        <script type="module" src="cmp/my-footer.js"></script>
+        <script type="module" src="cmp/my-progreso.js"></script>
+    </head>
+    <body>
+        <form name="forma">
+            <my-nav></my-nav>
+            <header>
+                <h1>Alumno Nuevo</h1>
+                <div class="herramientas">
+                    <a href="alumnos.html">Cancelar</a>
+                    <button type="submit">Guardar</button>
+                </div>
+            </header>
+            <p>
+                <label>
+                    Matricula
+                    <input name="matricula" type="text" required>
+                </label>
+            </p>
+            <p>
+                <label>
+                    Nombre
+                    <input name="nombre" type="text" required>
+                </label>
+            </p>
+            <p>
+                <label>
+                    Telefono
+                    <input name="telefono" type="text" required>
+                </label>
+            </p>
+            <p>
+                <label>
+                    Grupo
+                    <input name="grupo" type="text" required>
+                </label>
+            </p>
+            <p>
+                <label>
+                    Fecha
+                    <input name="fecha" type="date" required>
+                </label>
+            </p>
+            <my-footer></my-footer>
+        </form>
+        <script type="module" src="js/CtrlAlumnoNuevo.js"></script>
+    </body>
+</html>

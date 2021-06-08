@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Noticias</title>
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Carga el nucleo de Firebase JS SDK-->
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+        <!-- Carga el manejo de autenticación-->
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+        <!-- Carga el manejo de la base de datos-->
+        <script src= "https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+        <!-- Carga el manejo del Storage-->
+        <script src= "https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+        <!-- Iniciador de Firebase-->
+        <script src="js/init.js"></script>
+        <!-- Controladores para extras-->
+        <script type="module" src="cmp/my-nav.js"></script>
+        <script type="module" src="cmp/my-footer.js"></script>
+        <script type="module" src="cmp/my-progreso.js"></script>
+    </head>
+    <body>
+        <my-nav></my-nav>
+        <header>
+            <h1>Alumnos</h1>
+            <div class="herramientas">
+                <a href="alumnoNuevo.html">Agregar...</a>
+            </div>
+        </header>
+        <ul id="lista" class="lista">
+            <li>
+                <my-progreso></my-progreso>
+            </li>
+        </ul>
+        <my-footer></my-footer>
+        <script type="module" src="js/CtrlAlumnos.js"></script>
+    </body>
+</html>

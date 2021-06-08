@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Alumnos</title>
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Carga el nucleo de Firebase JS SDK-->
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+        <!-- Carga el manejo de autenticación-->
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+        <!-- Carga el manejo de la base de datos-->
+        <script src= "https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+        <!-- Carga el manejo del Storage-->
+        <script src= "https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+        <!-- Iniciador de Firebase-->
+        <script src="js/init.js"></script>
+        <!-- Controladores para extras-->
+        <script type="module" src="cmp/my-nav.js"></script>
+        <script type="module" src="cmp/my-footer.js"></script>
+        <script type="module" src="cmp/my-progreso.js"></script>
+    </head>
+    <body>
+        <form name="forma">
+            <my-nav></my-nav>
+            <header>
+                <a href="usuarios.html">Cancelar</a>
+                <h1><output name="cue">Usuario<my-progreso></my-progreso></output></h1>
+                <button type="submit">Guardar</button>
+                <button id="eliminar" type="button">Eliminar</button>
+            </header>
+            <figure id="figure"><img id="img" alt="Falta el Avatar"></figure>
+            <p>
+                <label>
+                    Avatar
+                    <input name="avatar" type="file" accept=".png,.jpg,.jpge,.gif">
+                </label>
+            </p>
+            <!-- Maneja una asociacion a uno-->
+            <p>
+                <label>
+                    Pasatiempo
+                    <select name="pasatiempo">
+                        <option>Cargando...</option>
+                    </select>
+                </label>
+            </p>
+            <!-- Maneja una asociacion a muchos-->
+            <fieldset>
+                <legend>Privilegios</legend>
+                <ul id="privilegios" class="checks">
+                    <li>
+                        <my-progreso></my-progreso>
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+        <my-footer></my-footer>
+        <script type="module">
+            import { muestraError } from "./lib/util.js";
+        </script>
+
+        <script type="module" src="js/CtrlAlumnoNuevo.js"></script>
+    </body>
+</html>
