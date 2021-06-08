@@ -1,10 +1,10 @@
 class MyFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = /* HMTL */
-        `<p>
+        '<p>
          &copy; 2021
          Marco Antonio Hernandez Nuñez
-         </p>`;
+         </p>';
     }
 }
 
