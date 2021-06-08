@@ -6,7 +6,7 @@ import {
 } from "../lib/util.js";
 import {
   iniciaSesión,
-  terminarSesión
+  terminaSesión
 } from "./seguridad.js";
 
 /** @type {HTMLFormElement} */
@@ -49,7 +49,7 @@ async function
       usuario.photoURL || "";
     forma.terminarSesión.
       addEventListener(
-        "click", terminarSesión);
+        "click", terminaSesión);
   } else {
     // No ha iniciado sesión.
     iniciaSesión();
