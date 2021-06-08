@@ -5,12 +5,12 @@
 :root {
   font-family: sans-serif;
   --col-active: #ffffff00;
-  --color-header: rgba(207, 207, 207, 0);
-  --colorMiNav: rgba(207, 207, 207, 0);
+  --color-header: rgb(255, 0, 119);
+  --colorMiNav: rgba(255, 0, 119);
 }
 
 body {
-  max-width: 640px;
+  max-width: 1920px;
   margin: 0 auto;
   padding: 0.5rem;
 }
