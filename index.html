@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pagina Inicial</title>
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Carga el nucleo de Firebase JS SDK-->
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+        <!-- Carga el manejo de autenticación-->
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+        <!-- Carga el manejo de la base de datos-->
+        <script src= "https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+        <!-- Configura la appa usando la informacion del sitio de Firebase-->
+        <script src="js/init.js"></script>
+
+        <!-- Controladores para extras-->
+        <script type="module" src="cmp/my-nav.js"></script>
+        <script type="module" src="cmp/my-footer.js"></script>
+        <script type="module" src="cmp/my-progreso.js"></script>
+    </head>
+    <body>
+        <form name="forma">
+            <my-nav></my-nav>
+            <header>
+                <h1>Pantalla Inicial</h1>
+                <div class="herramientas">
+                    <button type="button" name="terminarSesión">
+                        Terminar Sesión
+                    </button>
+                </div>
+            </header>
+            <figure>
+                <img id="avatar" alt="Avatar">
+            </figure>
+            <p>
+                <label>
+                    Email
+                    <output name="email"></output>
+                </label>
+            </p>
+            <p>
+                <label>
+                    Nombre
+                    <output name="nombre"></output>
+                </label>
+            </p>
+            <my-footer></my-footer>
+        </form>
+        <script type="module" src="js/CtrlSesion.js"></script>
+    </body>
+</html>
