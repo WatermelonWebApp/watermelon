@@ -9,7 +9,7 @@ mi-nav ul {
   height: 150px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: right;
   flex-flow: wrap;
   list-style: none;
   padding: 0;
