@@ -9,6 +9,13 @@ import {
 } from "../lib/util.js";
 
 class MiNav extends HTMLElement {
+  logo() {
+    this,innerHTML = /* html */
+    `<a href="#" class=logo">
+      <img src="img/Logo.png" alt="Logo" width="50" height=auto>
+    </a>`;
+  }
+
   connectedCallback() {
     this.innerHTML = /* html */
       `<ul>
