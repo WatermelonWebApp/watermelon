@@ -8,11 +8,10 @@
  * servidor. */
 // @ts-ignore
 firebase.initializeApp({
-  apiKey: "AIzaSyBaJR_YanqaVfS_bP1BRM6WmDVR3AmIVNA",
-    authDomain: "bdf3nv41.firebaseapp.com",
-    projectId: "bdf3nv41",
-    storageBucket: "bdf3nv41.appspot.com",
-    messagingSenderId: "936773338405",
-    appId: "1:936773338405:web:aadca9ce27b5903bad46cc",
-    measurementId: "G-M16HS2YZ45"
+  apiKey: "AIzaSyBcPBZKoRGO3Y1ntd34QQPwSJ2yrtE4gvA",
+    authDomain: "watermelon-webapp.firebaseapp.com",
+    projectId: "watermelon-webapp",
+    storageBucket: "watermelon-webapp.appspot.com",
+    messagingSenderId: "409265047068",
+    appId: "1:409265047068:web:5834fd2f3a24e6205341d9"
 });
