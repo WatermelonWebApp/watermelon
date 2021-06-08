@@ -9,13 +9,6 @@ import {
 } from "../lib/util.js";
 
 class MiNav extends HTMLElement {
-  logo() {
-    this,innerHTML = /* html */
-    `<a href="#" class=logo">
-      <img src="img/Logo.png" alt="Logo" width="50" height=auto>
-    </a>`;
-  }
-
   connectedCallback() {
     this.innerHTML = /* html */
       `<ul>
@@ -52,9 +45,15 @@ class MiNav extends HTMLElement {
       if (roles.has(
         "Administrador")) {
         html += /* html */
-          `<li>
+          `<a href="#" class=logo">
+            <img src="img/Logo.png" alt="Logo" width="50" height=auto>
+          </a>
+          <li>
             <a href=
-"alumnos.html">Edición</a>
+              "chat.html">Noticias del Dia</a>
+          </li>
+          <li>
+            <a href="alumnos.html">Edición</a>
           </li>`;
       }
       this.ul.innerHTML += html;
