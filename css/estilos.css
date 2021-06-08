@@ -4,9 +4,9 @@
 
 :root {
   font-family: sans-serif;
-  --col-active: #ff000085;
-  --color-header: rgb(255, 174, 0);
-  --colorMiNav: rgb(0, 174, 255);
+  --col-active: #ffffffb6;
+  --color-header: rgb(207, 207, 207);
+  --colorMiNav: rgb(207, 207, 207);
 }
 
 body {
