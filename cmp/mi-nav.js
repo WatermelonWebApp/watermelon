@@ -12,7 +12,7 @@ class MiNav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = /* html */
       `<ul>
-        <a href="index.html" class=logo">
+        <a align="left" href="index.html" class=logo">
           <img src="img/Logo.png" alt="Logo" width="50" height=auto>
           WATERMELON!
         </a>
