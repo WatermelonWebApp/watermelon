@@ -113,8 +113,30 @@ function htmlLista(snap) {
      * "doc" apunta a un
      * documento de la base
      * de datos. */
-    snap.forEach(doc =>
-      html += htmlFila(doc));
+    snap.forEach(doc => {
+      const data = doc.data();
+      var d = data.TIMESTAMP.toDate(),
+      dformat = [d.getDate(), d.getMonth()+1, d.getFullYear()].join(' - ')+' '+
+                [d.getHours(), d.getMinutes(), d.getSeconds()].join(':');
+      mensajes.innerHTML +=
+      `<li class="fila">
+        <a class="fila conImagen" href="usuario.html?${parametros}">
+          <span class="marco">
+            <img src?"${img}" alt="Falta el Avatar">
+          </span>
+          <span class="texto">
+            <strong class="primario">
+              ${cod(data.usuarioId)}
+            </strong>
+            ${dformat}
+            <span class="secundario">
+              ${cod(data.texto)}
+            </span>
+          </span>
+        </a>
+      </li>`;
+    }
+      //html += htmlFila(doc));
   } else {
     /* Cuando el número de
      * documentos devueltos por la
@@ -135,26 +157,26 @@ function htmlLista(snap) {
  * @param {import(
     "../lib/tiposFire.js").
     DocumentSnapshot} doc */
-function htmlFila(doc) {
+//function htmlFila(doc) {
   /** Recupera los datos del
    * documento.
    * @type {import("./tipos.js").
                       Mensaje} */
-  const data = doc.data();
+  //const data = doc.data();
   /* Agrega un li con los datos
    * del documento, los cuales se
    * codifican para evitar
    * inyección de código. */
-  return ( /* html */
-    `<li class="fila">
-      <strong class="primario">
+  //return ( /* html */
+  // `<li class="fila">
+      /*<strong class="primario">
         ${cod(data.usuarioId)}
-      </strong>
-      <span class="secundario">
+      </strong>*/
+      /*<span class="secundario">
         ${cod(data.texto)}
       </span>
-    </li>`);
-}
+    </li>`);*/
+/*}
 
 /** Función que se invoca cuando
  * hay un error al recuperar los
