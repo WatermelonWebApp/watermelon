@@ -18,21 +18,21 @@
 </head>
 <body>
   <mi-nav></mi-nav>
-  <form name="forma">
-    <header>
-      <h1>Diario</h1>
+  <header>
+    <h1>Diario</h1>
+    <form action="javascript:agrega();"></form>
       <div class="herramientas">
-        <input name="texto" required placeholder="Mensaje">
+        <input id="texto" type="text" name="texto" required placeholder="Agrega tu noticia aqui...">
         <button>Enviar</button>
       </div>
-    </header>
-    <ul id="lista" class="lista">
-      <li>
-        <mi-progreso></mi-progreso>
-      </li>
-    </ul>
-    <mi-footer></mi-footer>
-  </form>
+    </form>
+  </header>
+  <ul id="lista" class="lista">
+    <li>
+      <mi-progreso></mi-progreso>
+    </li>
+  </ul>
+  <mi-footer></mi-footer>
   <script type="module" src="js/CtrlDiario.js"></script>
 </body>
 </html>
