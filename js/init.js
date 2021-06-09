@@ -8,11 +8,9 @@
  * servidor. */
 // @ts-ignore
 firebase.initializeApp({
-  apiKey: "AIzaSyA_hWssAq8FYZrjYLzAt_cODdmXtlU9vOw",
-    authDomain: "bdfsto41.firebaseapp.com",
-    projectId: "bdfsto41",
-    storageBucket: "bdfsto41.appspot.com",
-    messagingSenderId: "310164915967",
-    appId: "1:310164915967:web:dbabd463595a7c7e1f6eca",
-    measurementId: "G-CC8R5390ZQ"
-});
+  apiKey: "AIzaSyBcPBZKoRGO3Y1ntd34QQPwSJ2yrtE4gvA",
+    authDomain: "watermelon-webapp.firebaseapp.com",
+    projectId: "watermelon-webapp",
+    storageBucket: "watermelon-webapp.appspot.com",
+    messagingSenderId: "409265047068",
+    appId: "1:409265047068:web:5834fd2f3a24e6205341d9"
