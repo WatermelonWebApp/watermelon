@@ -17,7 +17,7 @@ body {
 }
 
 header {
-  max-width: 1920px;
+  width: 1920px;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
