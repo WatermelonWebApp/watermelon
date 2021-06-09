@@ -43,7 +43,7 @@ export async function
       await cargaRoles(
         usuario.email);
     for (const rol of roles) {
-      if (rolIds.has("Administrador")) {
+      if (rolIds.has("Administrador" || "Cliente")) {
         return true;
       }
     }

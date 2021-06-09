@@ -16,6 +16,10 @@ body {
   padding: 0.5rem;
 }
 
+logo {
+  position: left;
+}
+
 header {
   width: 640px;
   position: -webkit-sticky;
