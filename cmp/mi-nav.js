@@ -50,9 +50,13 @@ class MiNav extends HTMLElement {
       if (roles.has(
         "Administrador")) {
         html += /* html */
-          `<li>
-            <a href="usuarios.html">Usuarios</a>
-          </li>`;
+        `<li>
+          <a href=
+          "edicion.html">Edición!</a>
+        </li>
+        <li>
+          <a href="usuarios.html">Usuarios</a>
+        </li>`;
       }
       this.ul.innerHTML += html;
     }
