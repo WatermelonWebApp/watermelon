@@ -120,20 +120,13 @@ function htmlLista(snap) {
                 [d.getHours(), d.getMinutes(), d.getSeconds()].join(':');
       mensajes.innerHTML +=
       `<li class="fila">
-        <a class="fila conImagen" href="usuario.html?${parametros}">
-          <span class="marco">
-            <img src?"${img}" alt="Falta el Avatar">
-          </span>
-          <span class="texto">
-            <strong class="primario">
-              ${cod(data.usuarioId)}
-            </strong>
-            ${dformat}
-            <span class="secundario">
-              ${cod(data.texto)}
-            </span>
-          </span>
-        </a>
+        <strong class="primario">
+          ${cod(data.usuarioId)}
+        </strong>
+        ${dformat}
+        <span class="secundario">
+          ${cod(data.texto)}
+        </span>
       </li>`;
     }
       //html += htmlFila(doc));
