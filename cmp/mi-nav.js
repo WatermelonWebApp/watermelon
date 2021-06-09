@@ -21,12 +21,8 @@ class MiNav extends HTMLElement {
             Inicio</a>
         </li>
       </ul>`;
-    this.ul =
-      this.querySelector("ul");
-    getAuth().onAuthStateChanged(
-      usuario => this.
-        cambiaUsuario(usuario),
-      muestraError);
+    this.ul = this.querySelector("ul");
+    getAuth().onAuthStateChanged(usuario => this.cambiaUsuario(usuario), muestraError);
   }
 
   /**

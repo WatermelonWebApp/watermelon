@@ -20,15 +20,14 @@ const forma = document["forma"];
 const lista = document.
   querySelector("#lista");
 
-getAuth().onAuthStateChanged(
-  protege, muestraError);
+getAuth().onAuthStateChanged(protege, muestraError);
 
 /** @param {import(
     "../lib/tiposFire.js").User}
     usuario */
 async function protege(usuario) {
   if (tieneRol(usuario,
-    ["Cliente"])) {
+    ["Administrador"])) {
     usuarioId = usuario.email;
     consulta();
     forma.addEventListener(
