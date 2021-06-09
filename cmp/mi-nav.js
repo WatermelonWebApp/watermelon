@@ -11,10 +11,11 @@ import {
 class MiNav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = /* html */
-      `<a href="#" class=logo">
-        <img src="img/Logo.png" alt="Logo" width="50" height=auto>
-      </a>
-      <ul>
+      `<ul>
+        <a href="index.html" class=logo">
+          <img src="img/Logo.png" alt="Logo" width="50" height=auto>
+          WATERMELON!
+        </a>
         <li>
           <a href="index.html">
             Inicio</a>
