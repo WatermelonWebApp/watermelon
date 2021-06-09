@@ -20,8 +20,7 @@ const forma = document["forma"];
 const lista = document.
   querySelector("#lista");
 
-getAuth().onAuthStateChanged(
-  protege, muestraError);
+getAuth().onAuthStateChanged(protege, muestraError);
 
 /** @param {import(
     "../lib/tiposFire.js").User}
@@ -141,18 +140,20 @@ function htmlFila(doc) {
    * @type {import("./tipos.js").
                       Mensaje} */
   const data = doc.data();
+  var d = data.TIMESTAMP.toDate(),
+  dformat = [d.getDate(), d.getMonth()+1, d.getFullYear()].join(' - ')+' '+
+            [d.getHours(), d.getMinutes(), d.getSeconds()].join(':');
   /* Agrega un li con los datos
    * del documento, los cuales se
    * codifican para evitar
    * inyección de código. */
-  return ( /* html */
-    `<li class="fila">
-      <strong class="primario">
+  return mensajes.innerHTML +=( /* html */
+    `<li>
+      <u>
         ${cod(data.usuarioId)}
-      </strong>
-      <span class="secundario">
-        ${cod(data.texto)}
-      </span>
+      </u>
+      ${dformat}
+      <br>${cod(data.texto)}
     </li>`);
 }
 

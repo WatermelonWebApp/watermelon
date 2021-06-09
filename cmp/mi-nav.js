@@ -11,12 +11,16 @@ import {
 class MiNav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = /* html */
-      `<ul>
-        <li>
-          <a href="index.html">
-            Sesión</a>
-        </li>
-      </ul>`;
+    `<ul>
+      <a href="index.html" class=logo">
+        <img src="img/Logo.png" alt="Logo" width="50" height=auto>
+        WATERMELON!
+      </a>
+      <li>
+        <a href="index.html">
+          Inicio</a>
+      </li>
+    </ul>`;
     this.ul =
       this.querySelector("ul");
     getAuth().onAuthStateChanged(
@@ -41,7 +45,7 @@ class MiNav extends HTMLElement {
         html += /* html */
           `<li>
             <a href=
-              "chat.html">Chat</a>
+              "diario.html">Diario!</a>
           </li>`;
       }
       /* Enlaces para solo
@@ -51,12 +55,7 @@ class MiNav extends HTMLElement {
         "Administrador")) {
         html += /* html */
           `<li>
-            <a href=
-"pasatiempos.html">Pasatiempos</a>
-          </li>
-          <li>
-            <a href=
-      "usuarios.html">Usuarios</a>
+            <a href="usuarios.html">Usuarios</a>
           </li>`;
       }
       this.ul.innerHTML += html;
