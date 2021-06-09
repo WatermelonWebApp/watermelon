@@ -147,7 +147,7 @@ function htmlFila(doc) {
    * del documento, los cuales se
    * codifican para evitar
    * inyección de código. */
-  return mensajes.innerHTML +=( /* html */
+  return (mensajes.innerHTML += /* html */
     `<li>
       <u>
         ${cod(data.usuarioId)}
