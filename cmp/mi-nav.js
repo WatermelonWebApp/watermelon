@@ -16,10 +16,6 @@ class MiNav extends HTMLElement {
         <img src="img/Logo.png" alt="Logo" width="50" height=auto>
         WATERMELON!
       </a>
-      <li>
-        <a href="index.html">
-          Inicio</a>
-      </li>
     </ul>`;
     this.ul =
       this.querySelector("ul");
