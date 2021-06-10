@@ -5,7 +5,7 @@
   <meta name="viewport"
     content="width=device-width,
        initial-scale=1.0">
-  <title>Usuario</title>
+  <title>EDICION DE USUARIO</title>
   <script
     src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js">
     </script>
@@ -45,45 +45,24 @@
       </h1>
       <div class="herramientas">
         <a href="usuarios.html">
-          Cancelar</a>
-        <button>Guardar</button>
+          Cancelar edición...</a>
+        <button>Guardar Edición</button>
         <button name="eliminar"
           type="button">
-          Eliminar
+          Eliminar usuario
         </button>
       </div>
     </header>
-    <figure id="figure">
-      <img alt="Falta el Avatar">
-    </figure>
     <p>
       <label>
-        Avatar
+        Avatar (Ingrese una foto de perfil para el usuario)
         <input name="avatar"
           type="file"
           accept=".png,.jpg,.jpeg,.gif">
       </label>
     </p>
-    <!--
-      Maneja una asociación a uno.
-    -->
-    <p>
-      <label>
-        Pasatiempo
-        <select
-          name="pasatiempoId">
-          <option>
-            Cargando…
-          </option>
-        </select>
-      </label>
-    </p>
-    <!--
-      Maneja una asociación a
-      muchos.
-    -->
     <fieldset>
-      <legend>Roles</legend>
+      <legend>Roles (¿Que roles presenta el usuario?)</legend>
       <ul id="listaRoles"
         class="checks">
         <li>
