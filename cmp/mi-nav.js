@@ -12,9 +12,9 @@ class MiNav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = /* html */
     `<ul>
-      <a href="index.html" class=logo">
+      <a href="index.html" class="logo-tr">
         <span>
-          <img src="img/Logo.png" alt="Logo" width="50" height=auto>WATERMELON!
+          WATERMELON!
         </span>
       </a>
     </ul>`;
@@ -30,7 +30,7 @@ class MiNav extends HTMLElement {
       if (roles.has("Cliente")) {
         html += /* html */
           `<li>
-            <a href="diario.html">
+            <a href="diario.html" class="liga">
               <span>Diario!</span>
             </a>
           </li>`;
@@ -39,12 +39,12 @@ class MiNav extends HTMLElement {
       if (roles.has("Administrador")) {
         html += /* html */
         `<li>
-          <a href="edicion.html">
+          <a href="edicion.html" class="liga">
             <span>Edición!</span>
           </a>
         </li>
         <li>
-          <a href="usuarios.html">
+          <a href="usuarios.html" class="liga">
             <span>Usuarios</span>
           </a>
         </li>`;

@@ -60,3 +60,23 @@ p label>* {
   box-sizing: border-box;
   width: 100%;
 }
+
+/* Character Styles */
+.logo-tr {
+  font-family: var(--unnamed-font-family-times-new-roman);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-normal);
+  font-size: var(--unnamed-font-size-25);
+  line-height: var(--unnamed-line-spacing-28);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-000000);
+  }
+  .liga {
+  font-family: var(--unnamed-font-family-times-new-roman);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-bold);
+  font-size: var(--unnamed-font-size-60);
+  line-height: var(--unnamed-line-spacing-69);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-000000);
+  }
