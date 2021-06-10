@@ -13,8 +13,10 @@ class MiNav extends HTMLElement {
     this.innerHTML = /* html */
     `<ul>
       <a href="index.html" class=logo">
-        <img src="img/Logo.png" alt="Logo" width="50" height=auto>
-        WATERMELON!
+        <span class="marco">
+          <img src="img/Logo.png" alt="Logo" width="50" height=auto>
+          WATERMELON!
+        </span>
       </a>
     </ul>`;
     this.ul =
@@ -40,8 +42,9 @@ class MiNav extends HTMLElement {
       if (roles.has("Cliente")) {
         html += /* html */
           `<li>
-            <a href=
-              "diario.html">Diario!</a>
+            <a href="diario.html">
+              <span>Diario!</span>
+            </a>
           </li>`;
       }
       /* Enlaces para solo
@@ -51,11 +54,14 @@ class MiNav extends HTMLElement {
         "Administrador")) {
         html += /* html */
         `<li>
-          <a href=
-          "edicion.html">Edición!</a>
+          <a href="edicion.html">
+            <span>Edición!</span>
+          </a>
         </li>
         <li>
-          <a href="usuarios.html">Usuarios</a>
+          <a href="usuarios.html">
+            <span>Usuarios</span>
+          </a>
         </li>`;
       }
       this.ul.innerHTML += html;
