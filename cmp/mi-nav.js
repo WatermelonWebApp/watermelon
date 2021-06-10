@@ -13,7 +13,7 @@ class MiNav extends HTMLElement {
     this.innerHTML = /* html */
     `<ul>
       <a href="index.html" class=logo">
-        <span class="marco">
+        <span>
           <img src="img/Logo.png" alt="Logo" width="50" height=auto>
           WATERMELON!
         </span>
