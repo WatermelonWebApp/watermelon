@@ -14,31 +14,19 @@ class MiNav extends HTMLElement {
     `<ul>
       <a href="index.html" class=logo">
         <span>
-          <img src="img/Logo.png" alt="Logo" width="50" height=auto>
-          WATERMELON!
+          <img src="img/Logo.png" alt="Logo" width="50" height=auto>WATERMELON!
         </span>
       </a>
     </ul>`;
-    this.ul =
-      this.querySelector("ul");
-    getAuth().onAuthStateChanged(
-      usuario => this.
-        cambiaUsuario(usuario),
-      muestraError);
+    this.ul = this.querySelector("ul");
+    getAuth().onAuthStateChanged( usuario => this.cambiaUsuario(usuario), muestraError);
   }
 
-  /**
-   * @param {import(
-      "../lib/tiposFire.js").User}
-      usu */
   async cambiaUsuario(usu) {
     if (usu && usu.email) {
       let html = "";
-      const roles =
-        await cargaRoles(
-          usu.email);
-      /* Enlaces para solo
-       * para clientes. */
+      const roles = await cargaRoles(usu.email);
+      // Enlaces de usuario "Cliente"
       if (roles.has("Cliente")) {
         html += /* html */
           `<li>
@@ -47,11 +35,8 @@ class MiNav extends HTMLElement {
             </a>
           </li>`;
       }
-      /* Enlaces para solo
-       * administradores.
-       */
-      if (roles.has(
-        "Administrador")) {
+      // Enlaces de usuario "Administrador"
+      if (roles.has("Administrador")) {
         html += /* html */
         `<li>
           <a href="edicion.html">

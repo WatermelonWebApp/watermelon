@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WATERMELON!</title>
+    <title>EDICION DE USUARIO</title>
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js"></script>
     <script src="js/init.js"></script>
     <script type="module" src="cmp/mi-nav.js"></script>
     <script type="module" src="cmp/mi-footer.js"></script>
@@ -17,34 +18,37 @@
     <form name="forma">
       <mi-nav></mi-nav>
       <header>
-        <h1>Inicio</h1>
+        <h1>
+          <output name="cue">
+            Usuario
+            <mi-progreso></mi-progreso>
+          </output>
+        </h1>
         <div class="herramientas">
-          <button type="button" name="terminarSesión">
-            Terminar Sesión
+          <a href="usuarios.html">
+            Cancelar edición...</a>
+          <button>Guardar Edición</button>
+          <button name="eliminar" type="button">
+            Eliminar usuario
           </button>
         </div>
       </header>
-      <figure>
-        <img id="avatar" src="" alt="Avatar">
-      </figure>
       <p>
         <label>
-          Email
-          <output name="email">
-            <mi-progreso></mi-progreso>
-          </output>
+          Avatar (Ingrese una foto de perfil para el usuario)
+          <input name="avatar" type="file" accept=".png,.jpg,.jpeg,.gif">
         </label>
       </p>
-      <p>
-        <label>
-          Nombre
-          <output name="nombre">
+      <fieldset>
+        <legend>Roles (¿Que roles presenta el usuario?)</legend>
+        <ul id="listaRoles" class="checks">
+          <li>
             <mi-progreso></mi-progreso>
-          </output>
-        </label>
-      </p>
+          </li>
+        </ul>
+      </fieldset>
       <mi-footer></mi-footer>
     </form>
-    <script type="module" src="js/CtrlSesion.js"></script>
+    <script type="module" src="js/CtrlUsuario.js"></script>
   </body>
 </html>
