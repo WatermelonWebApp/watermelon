@@ -1,6 +1,6 @@
 mi-nav {
   display: block;
-  background-color: url("../imag/background.png") repeat;
+  background-color: var(--colorMiNav) repeat;
 }
 
 mi-nav ul {

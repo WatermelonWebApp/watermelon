@@ -4,23 +4,24 @@
 
 :root {
   font-family: sans-serif;
-  --col-active: #4646462c;
-  --color-header: rgba(255, 255, 255, 0);
-  --colorMiNav: rgb(245, 44, 87);
+  --col-active: #000000;
+  --color-header: #ffb6ad;
+  --colorMiNav: #ff7866;
+  --colorBody: #fadad6;
 }
 
 body {
   max-width: 640px;
   margin: 0 auto;
   padding: 0.5rem;
+  background-color: var(--colorBody);
 }
 
 header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color:
-    var(--color-header);
+  background-color: var(--color-header);
 }
 
 .herramientas {
@@ -46,8 +47,7 @@ figure img {
   max-width: 100%;
 }
 
-legend,
-p label {
+legend, p label {
   display: block;
   font-weight: bold;
   font-size: 0.7rem;
