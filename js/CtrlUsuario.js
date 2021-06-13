@@ -40,7 +40,7 @@ async function busca() {
     if (doc.exists) {
       const data = doc.data();
       forma.cue.value = id || "";
-      img.src = await urlStorage(id);
+      //img.src = await urlStorage(id);
       checksRoles(listaRoles, data.rolIds);
       forma.addEventListener("submit", guarda);
       forma.eliminar.addEventListener("click", elimina);
