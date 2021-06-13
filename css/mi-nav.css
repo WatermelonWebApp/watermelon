@@ -1,6 +1,10 @@
 mi-nav {
   display: block;
-  background-color: var(--colorMiNav) repeat;
+  background-color: var(--colorMiNav);
+  width: 1920px;
+  height: normal;
+  margin: 0 auto;
+  padding: 2em;
 }
 
 mi-nav ul {

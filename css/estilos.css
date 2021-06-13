@@ -11,10 +11,21 @@
 }
 
 body {
+  margin: 0 auto;
+  padding: 0;
+  background-color: var(--colorBody);
+}
+
+p {
   max-width: 640px;
   margin: 0 auto;
   padding: 0.5rem;
-  background-color: var(--colorBody);
+}
+
+figure {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0.5rem;
 }
 
 header {
@@ -41,6 +52,7 @@ header input {
 
 h1 {
   margin: 0.5rem 0;
+  text-align: center;
 }
 
 figure img {
