@@ -2,9 +2,9 @@ mi-nav {
   display: block;
   background-color: var(--colorMiNav);
   width: 1920px;
-  height: 10px;
+  height: 40px;
   margin: 0 auto;
-  padding: 2em;
+  padding: 0.5rem;
 }
 
 mi-nav ul {
