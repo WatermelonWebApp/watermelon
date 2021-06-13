@@ -13,31 +13,7 @@ import {
 
 const firestore = getFirestore();
 const daoRol = firestore.collection("Rol");
-const daoPasatiempo = firestore.collection("Pasatiempo");
 const daoUsuario = firestore.collection("Usuario");
-
-export function selectPasatiempos(select, valor) {
-  valor = valor || "";
-  daoPasatiempo.orderBy("nombre").onSnapshot( snap => {
-        let html = SIN_PASATIEMPO;
-        snap.forEach(doc => html += htmlPasatiempo(doc, valor));
-        select.innerHTML = html;
-      },
-      e => {
-        muestraError(e);
-        selectPasatiempos(select, valor);
-      }
-    );
-}
-
-function htmlPasatiempo(doc, valor) {
-  const selected = doc.id === valor ? "selected" : "";
-  const data = doc.data();
-  return (/* html */
-    `<option value="${cod(doc.id)}"${selected}>
-      ${cod(data.nombre)}
-    </option>`);
-}
 
 export function checksRoles(elemento, valor) {
   const set = new Set(valor || []);
@@ -82,10 +58,8 @@ export function checkRol(doc, set) {
 export async function guardaUsuario(evt, formData, id) {
   try {
     evt.preventDefault();
-    const pasatiempoId = getForánea(formData, "pasatiempoId");
     const rolIds = formData.getAll("rolIds");
     await daoUsuario.doc(id).set({
-        pasatiempoId,
         rolIds
       });
     const avatar = formData.get("avatar");
