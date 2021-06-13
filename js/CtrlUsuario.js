@@ -17,8 +17,7 @@ import {
 } from "./seguridad.js";
 import {
   checksRoles,
-  guardaUsuario,
-  selectPasatiempos
+  guardaUsuario
 } from "./usuarios.js";
 
 const params = new URL(location.href).searchParams;
