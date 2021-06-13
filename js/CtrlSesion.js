@@ -17,7 +17,6 @@ async function muestraSesión(usuario) {
   if (usuario && usuario.email) {
     forma.email.value = usuario.email || "";
     forma.nombre.value = usuario.displayName || "";
-    avatar.src = usuario.photoURL || "";
     forma.terminarSesión.addEventListener("click", terminaSesión);
   } else {
     iniciaSesión();
