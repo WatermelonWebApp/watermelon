@@ -1,4 +1,4 @@
-mi-nav {
+Nav {
   display: block;
   background-color: var(--colorMiNav);
   width: 1920px;
@@ -9,7 +9,7 @@ mi-nav {
   text-align: center;
 }
 
-mi-nav ul {
+Nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,6 +19,6 @@ mi-nav ul {
   margin: 0;
 }
 
-mi-nav ul li {
+Nav ul li {
   margin: 0.5rem;
 }
