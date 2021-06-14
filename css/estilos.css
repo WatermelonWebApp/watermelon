@@ -16,6 +16,13 @@ body {
   background-color: var(--colorBody);
 }
 
+.body {
+  margin: 0 auto;
+  padding: 0;
+  background-color: var(--colorBody);
+  width: 640px;
+}
+
 p {
   max-width: 640px;
   margin: 0 auto;
