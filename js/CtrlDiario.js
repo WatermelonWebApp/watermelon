@@ -45,15 +45,24 @@ function htmlLista(snap) {
 
 function htmlFila(doc) {
   const data = doc.data();
-  return ( /* html */
-    `<li class="fila">
-      <strong class="primario">
-        ${cod(data.usuarioId)}
-      </strong>
-      <span class="secundario">
-        ${cod(data.texto)}
-      </span>
-    </li>`);
+  if (tieneRol(usuario,["Administrador"])) {
+    return ( /* html */
+      `<li class="fila">
+        <strong class="primario">
+          ${cod(data.usuarioId)}
+        </strong>
+        <span class="secundario">
+          ${cod(data.texto)}
+        </span>
+      </li>`);
+  } else if (tieneRol(usuario,["Cliente"])) {
+    return ( /* html */
+      `<li class="fila">
+        <span class="secundario">
+          ${cod(data.texto)}
+        </span>
+      </li>`);
+  }
 }
 
 function errConsulta(e) {
