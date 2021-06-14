@@ -45,7 +45,6 @@ function htmlLista(snap) {
 
 function htmlFila(doc) {
   const data = doc.data();
-  if (tieneRol(usuario,["Administrador"])) {
     return ( /* html */
       `<li class="fila">
         <span class="secundario">
