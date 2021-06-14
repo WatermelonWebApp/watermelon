@@ -46,24 +46,12 @@ function htmlLista(snap) {
 function htmlFila(doc) {
   const data = doc.data();
   if (tieneRol(usuario,["Administrador"])) {
-    html += /* html */
-      `<li class="fila">
-        <strong class="primario">
-          ${cod(data.usuarioId)}
-        </strong>
-        <span class="secundario">
-          ${cod(data.texto)}
-        </span>
-      </li>`;
-  } else if (tieneRol(usuario,["Cliente"])) {
-    html += /* html */
+    return ( /* html */
       `<li class="fila">
         <span class="secundario">
           ${cod(data.texto)}
         </span>
-      </li>`;
-  }
-  return lista.innerHTML = html;
+      </li>`);
 }
 
 function errConsulta(e) {
