@@ -1,14 +1,14 @@
 import {
   getAuth,
   getFirestore
-} from "../lib/fabrica.js";
+} from "../lib/Fab.js";
 import {
   eliminaStorage,
   urlStorage
-} from "../lib/storage.js";
+} from "../lib/Storage.js";
 import {
   muestraError
-} from "../lib/util.js";
+} from "../lib/Utilit.js";
 import {
   muestraUsuarios
 } from "./navegacion.js";

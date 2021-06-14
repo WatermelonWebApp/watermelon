@@ -1,10 +1,10 @@
 import {
   getAuth
-} from "../lib/fabrica.js";
+} from "../lib/Fab.js";
 import {
   getString,
   muestraError
-} from "../lib/util.js";
+} from "../lib/Utilit.js";
 import {
   tieneRol
 } from "./seguridad.js";

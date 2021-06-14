@@ -1,12 +1,12 @@
 import {
   getAuth,
   getFirestore
-} from "../lib/fabrica.js";
+} from "../lib/Fab.js";
 import {
   cod,
   getString,
   muestraError
-} from "../lib/util.js";
+} from "../lib/Utilit.js";
 import {
   tieneRol
 } from "./seguridad.js";

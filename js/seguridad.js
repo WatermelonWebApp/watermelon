@@ -1,10 +1,10 @@
 import {
   getAuth,
   getFirestore
-} from "../lib/fabrica.js";
+} from "../lib/Fab.js";
 import {
   muestraError
-} from "../lib/util.js";
+} from "../lib/Utilit.js";
 
 const firestore = getFirestore();
 const daoUsuario = firestore.collection("Usuario");

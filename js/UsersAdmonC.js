@@ -1,14 +1,14 @@
 import {
   getAuth,
   getFirestore
-} from "../lib/fabrica.js";
+} from "../lib/Fab.js";
 import {
   urlStorage
-} from "../lib/storage.js";
+} from "../lib/Storage.js";
 import {
   cod,
   muestraError
-} from "../lib/util.js";
+} from "../lib/Utilit.js";
 import {
   tieneRol
 } from "./seguridad.js";

@@ -1,4 +1,4 @@
-class MiFooter extends HTMLElement {
+class MyFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = /* html */
       `<p>
@@ -7,4 +7,4 @@ class MiFooter extends HTMLElement {
   }
 }
 
-customElements.define("mi-footer", MiFooter);
+customElements.define("Footer", MyFooter);
