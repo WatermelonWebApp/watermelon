@@ -5,6 +5,8 @@ mi-nav {
   height: 40px;
   margin: 0 auto;
   padding: 0.5rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
 }
 
 mi-nav ul {
