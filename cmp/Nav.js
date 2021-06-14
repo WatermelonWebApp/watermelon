@@ -3,10 +3,10 @@ import {
 } from "../js/seguridad.js";
 import {
   getAuth
-} from "../lib/Fab.js";
+} from "../lib/fabrica.js";
 import {
   muestraError
-} from "../lib/Utilit.js";
+} from "../lib/util.js";
 
 class MyNav extends HTMLElement {
   connectedCallback() {

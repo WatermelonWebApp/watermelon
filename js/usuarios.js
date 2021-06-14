@@ -1,12 +1,12 @@
 import {
   getFirestore
-} from "../lib/Fab.js";
+} from "../lib/fabrica.js";
 import {
   subeStorage
-} from "../lib/Storage.js";
+} from "../lib/storage.js";
 import {
   cod, getForánea, muestraError
-} from "../lib/Utilit.js";
+} from "../lib/util.js";
 import {
   muestraUsuarios
 } from "./navegacion.js";

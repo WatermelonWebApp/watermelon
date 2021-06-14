@@ -1,9 +1,9 @@
 import {
   getAuth
-} from "../lib/Fab.js";
+} from "../lib/fabrica.js";
 import {
   muestraError
-} from "../lib/Utilit.js";
+} from "../lib/util.js";
 import {
   iniciaSesión,
   terminaSesión

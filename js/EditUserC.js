@@ -1,14 +1,14 @@
 import {
   getAuth,
   getFirestore
-} from "../lib/Fab.js";
+} from "../lib/fabrica.js";
 import {
   eliminaStorage,
   urlStorage
-} from "../lib/Storage.js";
+} from "../lib/storage.js";
 import {
   muestraError
-} from "../lib/Utilit.js";
+} from "../lib/util.js";
 import {
   muestraUsuarios
 } from "./navegacion.js";
@@ -40,7 +40,6 @@ async function busca() {
     if (doc.exists) {
       const data = doc.data();
       forma.cue.value = id || "";
-      //img.src = await urlStorage(id);
       checksRoles(listaRoles, data.rolIds);
       forma.addEventListener("submit", guarda);
       forma.eliminar.addEventListener("click", elimina);
