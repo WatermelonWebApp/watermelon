@@ -6,7 +6,7 @@
   font-family: sans-serif;
   --col-active: #000000;
   --color-header: #ffb6ad;
-  --colorMiNav: #ff7866;
+  --colorMiNav: #000000;
   --colorBody: #fadad6;
 }
 
@@ -7090,7 +7090,7 @@ p label>* {
     }
     
     .bg-dark {
-      background-color: #ffffff !important;
+      background-color: #000000 !important;
     }
     
     .bg-body {
