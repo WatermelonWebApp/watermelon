@@ -3609,6 +3609,12 @@ p label>* {
     
     .navbar {
       flex-wrap: wrap;
+
+      position: -webkit-sticky;
+      position: sticky;
+      max-width: 1920px;
+      margin: 0 auto;
+
       align-items: center;
       justify-content: space-between;
       padding-top: 0.5rem;
