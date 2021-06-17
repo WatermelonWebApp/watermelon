@@ -29,6 +29,18 @@ p {
   padding: 0.5rem;
 }
 
+.Nav {
+  display: block;
+  background-color: var(--colorMiNav);
+  width: 1920px;
+  height: 40px;
+  margin: 0 auto;
+  padding: 0.5rem;
+  color: rgb(255, 255, 255);
+  color-adjust: white;
+  text-align: center;
+}
+
 figure {
   max-width: 640px;
   margin: 0 auto;
