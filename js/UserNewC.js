@@ -11,7 +11,6 @@ import {
 import {
   checksRoles,
   guardaUsuario,
-  selectPasatiempos
 } from "./usuarios.js";
 
 const forma = document["forma"];
