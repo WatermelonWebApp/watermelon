@@ -8,7 +8,7 @@ import {
   muestraError
 } from "../lib/util.js";
 
-class MyNav extends HTMLElement {
+class MiNav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = /* html */
     `<ul>
@@ -26,7 +26,6 @@ class MyNav extends HTMLElement {
     if (usu && usu.email) {
       let html = "";
       const roles = await cargaRoles(usu.email);
-      // Enlaces de usuario "Cliente"
       if (roles.has("Cliente")) {
         html += /* html */
           `<li>
@@ -35,7 +34,6 @@ class MyNav extends HTMLElement {
             </a>
           </li>`;
       }
-      // Enlaces de usuario "Administrador"
       if (roles.has("Administrador")) {
         html += /* html */
         `<li>
@@ -55,4 +53,4 @@ class MyNav extends HTMLElement {
 }
 
 customElements.define(
-  "Nav", MyNav);
+  "mi-nav", MiNav);
