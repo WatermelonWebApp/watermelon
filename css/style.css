@@ -3614,6 +3614,7 @@ p label>* {
       position: sticky;
       max-width: 1920px;
       margin: 0 auto;
+      padding: 0.5rem;
 
       align-items: center;
       justify-content: space-between;
