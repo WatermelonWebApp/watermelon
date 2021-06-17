@@ -10,7 +10,7 @@ import {
 } from "./seguridad.js";
 import {
   checksRoles,
-  guardaUsuario,
+  guardaUsuario
 } from "./usuarios.js";
 
 const forma = document["forma"];
