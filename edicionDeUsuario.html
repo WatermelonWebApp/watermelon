@@ -10,19 +10,19 @@
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js"></script>
     <script src="js/init.js"></script>
-    <script type="module" src="cmp/Nav.js"></script>
-    <script type="module" src="cmp/Footer.js"></script>
-    <script type="module" src="cmp/Progress.js"></script>
+    <script type="module" src="cmp/mi-nav.js"></script>
+    <script type="module" src="cmp/mi-footer.js"></script>
+    <script type="module" src="cmp/mi-progreso.js"></script>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <form name="forma">
-      <Nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom"></Nav>
+      <mi-nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom"></mi-nav>
       <header>
         <h1>
           <output name="cue">
             Usuario
-            <Progress></Progress>
+            <mi-progreso></mi-progreso>
           </output>
         </h1>
         <div class="herramientas">
@@ -45,12 +45,12 @@
           <legend>Roles (¿Que roles presenta el usuario?)</legend>
           <ul id="listaRoles" class="checks">
             <li>
-              <Progress></Progress>
+              <mi-progreso></mi-progreso>
             </li>
           </ul>
         </fieldset>
       </p>
-      <Footer></Footer>
+      <mi-footer></mi-footer>
     </form>
     <script type="module" src="js/EditUserC.js"></script>
   </body>

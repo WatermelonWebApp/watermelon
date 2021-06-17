@@ -9,14 +9,14 @@
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
     <script src="js/init.js"></script>
-    <script type="module" src="cmp/Nav.js"></script>
-    <script type="module" src="cmp/Footer.js"></script>
-    <script type="module" src="cmp/Progress.js"></script>
+    <script type="module" src="cmp/mi-nav.js"></script>
+    <script type="module" src="cmp/mi-footer.js"></script>
+    <script type="module" src="cmp/mi-progreso.js"></script>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <form name="forma">
-      <Nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">HOLA</Nav>
+      <mi-nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">HOLA</mi-nav>
       <header>
         <div>
             <button class="btn btn-light me-4" type="button" name="terminarSesión">
@@ -30,7 +30,7 @@
         <label>
           Email
           <output name="email">
-            <Progress></Progress>
+            <mi-progreso></mi-progreso>
           </output>
         </label>
       </p>
@@ -38,7 +38,7 @@
         <label>
           Nombre
           <output name="nombre">
-            <Progress></Progress>
+            <mi-progreso></mi-progreso>
           </output>
         </label>
       </p>
@@ -52,7 +52,7 @@
       <figure>
           <img src="img/News.png" alt="News.png">
       </figure>
-      <Footer></Footer>
+      <mi-footer></mi-footer>
     </form>
     <script type="module" src="js/SesionC.js"></script>
   </body>
